@@ -6,11 +6,218 @@
   <meta name="description" content="Kian Murphey's Portfolio">
   <title>Kian Murphey | Portfolio</title>
   <link rel="icon" type="image/png" href="assets\icon.png">
-</head>
+  <link rel="stylesheet" href="styles.css">
 
+<style>
+  /* Global Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: #121212;
+    color: #fff;
+  }
+
+  /* Header */
+  header {
+    background: linear-gradient(135deg, #ff6b6b, #556270);
+    padding: 3rem;
+    text-align: center;
+    border-bottom: 3px solid #ff9f43;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+  }
+
+  header h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+  }
+
+  /* Navigation */
+  nav {
+    margin-top: 1rem;
+  }
+
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+  }
+
+  nav a:hover {
+    color: #ff9f43;
+  }
+
+  /* Main Sections */
+  main {
+    max-width: 1000px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+  }
+
+  section {
+    margin-bottom: 3rem;
+  }
+
+  section h2 {
+    font-size: 2rem;
+    border-bottom: 3px solid #ff9f43;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  /* About Section with Profile Picture */
+  .about-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    object-fit: cover;
+  }
+
+  /* Project Cards */
+  .projects-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+  }
+
+  .project {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .project:hover {
+    transform: scale(1.05);
+  }
+
+  .project a {
+    color: #ff9f43;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .project a:hover {
+    text-decoration: underline;
+  }
+
+  /* Contact Section */
+  .contact-links a {
+    display: inline-block;
+    margin: 0.5rem;
+    font-size: 1.5rem;
+    color: #ff9f43;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .contact-links a:hover {
+    transform: scale(1.2);
+  }
+
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: linear-gradient(135deg, #556270, #ff6b6b);
+    margin-top: 3rem;
+  }
+</style>
+</head>
 <body>
-<p>Hello World</p>
-</body>
+
+<!-- HEADER -->
+<header>
+  <h1>Kian Murphey</h1>
+  <p>Frontend Developer · UI Designer</p>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+    <a href="cv.pdf" target="_blank">CV</a>
+  </nav>
+</header>
+
+<!-- MAIN CONTENT -->
+<main>
+  <!-- ABOUT SECTION -->
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="about-container">
+      <img src="Kate+Kian4.jpeg" alt="Kian Murphey" class="profile-img">
+      <p>
+        Hi! I'm Kian Murphey, current undergraduate at
+        <a href="https://www.cs.wisc.edu/" style="color: #fc032c;">UW-Madison</a>. I'm studying Computer 
+        Science with a minor in Theatre and Drama.
+        Right now, I'm taking a semester abroad with DIS Copenhagen, where I'm finishing up requirements for the humanities
+        in my degree.
+      </p>
+    </div>
+    <p>
+      I am always working on keeping my coding skills up, alongside my class work I try to keep up with
+      trends in web design and hone my own skills on it. Outside of work, I'm almost always listening to
+      music or spending time with my friends. If you're interested in my music taste, I host a show on 
+      WSUM 91.7 FM Madison, tune in on Saturdays at 10PM CST!
+    </p>
+  </section>
+
+  <!-- PROJECTS SECTION -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects-list">
+      <div class="project">
+        <h3>Proxy Finder</h3>
+        <p>A data-driven causal inference method using Python and PyTorch.</p>
+        <p><a href="#">GitHub (Coming Soon)</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS SECTION -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <p><strong>Languages:</strong> Java, CSS, HTML, Python, C/C++, Golang, Rust, R, SQL</p>
+    <p><strong>Tools:</strong> Git/GitHub, Figma, Adobe Photoshop & Illustrator, Unix/Linux (bash scripting), LATEX, VScode, React</p>
+    <p><strong>Interests:</strong> Web Development, Operating Systems, Algorithms, Probability, Statistics</p>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:kian.murphey@gmail.com">kian.murphey@gmail.com</a></p>
+    <div class="contact-links">
+      <a href="https://github.com/kianmm2" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/kian-murphey-7023b81ba/" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2024 Kian Murphey</p>
+</footer>
 
 </html>
 
